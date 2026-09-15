@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <link rel="stylesheet" href="index.css">
 
+    <title>Colorful Calculator</title>
+
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <script src="index.cs"></script>
 
+    <div class="calculator">
 
-<div class="container"><div class="calculator">
-<form>
-    <div>
-        <input type="text" name="display">
+        <!-- Display -->
+        <input type="text" id="display" readonly>
+
+        <!-- Row 1 -->
+        <div class="row">
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="calculate('%')">%</button>
+            <button onclick="calculate('/')">÷</button>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+            <button onclick="calculate('7')">7</button>
+            <button onclick="calculate('8')">8</button>
+            <button onclick="calculate('9')">9</button>
+            <button onclick="calculate('*')">×</button>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row">
+            <button onclick="calculate('4')">4</button>
+            <button onclick="calculate('5')">5</button>
+            <button onclick="calculate('6')">6</button>
+            <button onclick="calculate('-')">−</button>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="row">
+            <button onclick="calculate('1')">1</button>
+            <button onclick="calculate('2')">2</button>
+            <button onclick="calculate('3')">3</button>
+            <button onclick="calculate('+')">+</button>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="row">
+            <button onclick="calculate('0')">0</button>
+            <button onclick="calculate('.')">.</button>
+            <button onclick="showResult()">=</button>
+        </div>
+
     </div>
-    <div>
-         <input type="button" value="AC" > 
-         <input type="button" value="DE" > 
-         <input type="button" value="." > 
-         <input type="button" value="/" > 
-</div>
- <div>
-         <input type="button" value="7" > 
-         <input type="button" value="8" > 
-         <input type="button" value="9" > 
-         <input type="button" value="*" > 
-</div>
- <div>
-         <input type="button" value="4" > 
-         <input type="button" value="5" > 
-         <input type="button" value="6" > 
-         <input type="button" value="-" > 
-</div>
- <div>
-         <input type="button" value="1" > 
-         <input type="button" value="2" > 
-         <input type="button" value="3" > 
-         <input type="button" value="+" > 
-</div>
-</form>
-</div>
-</div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
